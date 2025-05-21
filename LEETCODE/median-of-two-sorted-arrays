@@ -1,0 +1,9 @@
+class Solution:
+    def findMedianSortedArrays(self, arr, brr):
+        merged = arr + brr
+        merged.sort()
+        n = len(merged)
+        if n % 2 != 0:
+            return float(merged[n // 2])
+        else:
+            return (merged[n // 2] + merged[(n // 2) - 1]) / 2.0
